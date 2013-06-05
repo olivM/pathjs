@@ -62,6 +62,7 @@ var Path = {
                     slice = possible_routes[j];
                     compare = path;
                     if (slice.search(/:/) > 0) {
+                        params = {};
                         for (i = 0; i < slice.split("/").length; i++) {
                             if ((i < compare.split("/").length) && (slice.split("/")[i].charAt(0) === ":")) {
                                 params[slice.split('/')[i].replace(/:/, '')] = compare.split("/")[i];
